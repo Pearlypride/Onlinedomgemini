@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новая заявка - OnlineDom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>OnlineDom</h1>
+            <nav>
+                <ul>
+                    <li><a href="user-dashboard.html">Личный кабинет</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-page">
+        <div class="container">
+            <h2>Новый запрос/жалоба</h2>
+            <form id="new-request-form">
+                <div class="form-group">
+                    <label for="category">Категория:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Выберите категорию</option>
+                        <option value="сантехника">Сантехника</option>
+                        <option value="электрика">Электрика</option>
+                        <option value="благоустройство">Благоустройство</option>
+                        <option value="другое">Другое</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Фото (необязательно):</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="description">Описание:</label>
+                    <textarea id="description" name="description" rows="7" required></textarea>
+                </div>
+                <button type="submit" class="button primary">Отправить заявку</button>
+                <p class="back-link"><a href="user-dashboard.html">Назад в личный кабинет</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OnlineDom. Все права защищены.</p>
+            <p>Контакты: info@onlinedom.kz</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="new-request.js"></script>
+</body>
+</html>

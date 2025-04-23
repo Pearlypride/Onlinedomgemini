@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки профиля - OnlineDom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>OnlineDom</h1>
+            <nav>
+                <ul>
+                    <li><a href="user-dashboard.html">Личный кабинет</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="profile-page">
+        <div class="container">
+            <h2>Настройки профиля</h2>
+            <form id="profile-form">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" value="Иван Иванов">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="ivan.ivanov@example.com" readonly>
+                    <small>Email нельзя изменить.</small>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" value="+7 (777) 123-45-67">
+                </div>
+                <div class="form-group">
+                    <label for="new-password">Новый пароль:</label>
+                    <input type="password" id="new-password" name="new-password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-new-password">Подтвердите новый пароль:</label>
+                    <input type="password" id="confirm-new-password" name="confirm-new-password">
+                </div>
+                <button type="submit" class="button primary">Сохранить изменения</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OnlineDom. Все права защищены.</p>
+            <p>Контакты: info@onlinedom.kz</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

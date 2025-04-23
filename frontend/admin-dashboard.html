@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора - OnlineDom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>OnlineDom</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Профиль</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container">
+            <aside class="sidebar">
+                <h3>Меню администратора</h3>
+                <ul>
+                    <li><a href="#" class="active" data-module="requests">Заявки жильцов</a></li>
+                    <li><a href="#" data-module="chats">Чаты</a></li>
+                    <li><a href="#" data-module="payments">Отчёты по оплатам</a></li>
+                    <li><a href="#" data-module="notifications">Рассылки</a></li>
+                    <li><a href="#" data-module="announcements">Объявления/новости</a></li>
+                </ul>
+            </aside>
+            <div class="content">
+                <section id="requests-module" class="dashboard-module active">
+                    <h2>Заявки жильцов</h2>
+                    <div class="requests-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Дата</th>
+                                    <th>Житель</th>
+                                    <th>Категория</th>
+                                    <th>Описание</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2025-04-21</td>
+                                    <td>Иванов И.И.</td>
+                                    <td>Сантехника</td>
+                                    <td>Протекает кран на кухне.</td>
+                                    <td class="status-new">Новая</td>
+                                    <td><a href="#">Просмотреть</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2025-04-20</td>
+                                    <td>Петров П.П.</td>
+                                    <td>Электрика</td>
+                                    <td>Не работает освещение в подъезде.</td>
+                                    <td class="status-in-progress">В обработке</td>
+                                    <td><a href="#">Просмотреть</a></td>
+                                </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="chats-module" class="dashboard-module">
+                    <h2>Чаты</h2>
+                    <div class="chats-list">
+                        <ul>
+                            <li><a href="#">Иванов И.И.</a> (Новое сообщение)</li>
+                            <li><a href="#">Сидоров С.С.</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="payments-module" class="dashboard-module">
+                    <h2>Отчёты по оплатам</h2>
+                    <div class="payments-reports">
+                        <p>Здесь будут отображаться отчёты по оплатам.</p>
+                    </div>
+                </section>
+
+                <section id="notifications-module" class="dashboard-module">
+                    <h2>Рассылки</h2>
+                    <div class="notifications-form">
+                        <textarea placeholder="Текст рассылки"></textarea>
+                        <button class="button primary">Отправить рассылку</button>
+                    </div>
+                </section>
+
+                <section id="announcements-module" class="dashboard-module">
+                    <h2>Объявления/новости</h2>
+                    <div class="announcements-list">
+                        <ul>
+                            <li><a href="#">Плановое отключение воды 25.04.2025</a></li>
+                            <li><a href="#">Субботник во дворе 30.04.2025</a></li>
+                        </ul>
+                        <button class="button secondary">Добавить объявление</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OnlineDom. Все права защищены.</p>
+            <p>Контакты: info@onlinedom.kz</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

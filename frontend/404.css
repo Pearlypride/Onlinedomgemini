@@ -1,0 +1,26 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.error-page h1 {
+    font-size: 5rem;
+    color: #dc3545; /* Red color for error */
+    margin-bottom: 20px;
+}
+
+.error-page p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.button.primary {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}

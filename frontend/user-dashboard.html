@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - OnlineDom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>OnlineDom</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Профиль</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <div class="container">
+            <aside class="sidebar">
+                <h3>Меню</h3>
+                <ul>
+                    <li><a href="#" class="active" data-module="my-requests">Мои обращения</a></li>
+                    <li><a href="#" data-module="new-request">Новый запрос/жалоба</a></li>
+                    <li><a href="#" data-module="my-payments">Мои платежи</a></li>
+                    <li><a href="#" data-module="voting">Голосования</a></li>
+                    <li><a href="#" data-module="chat">Чат с КСК</a></li>
+                </ul>
+            </aside>
+            <div class="content">
+                <section id="my-requests-module" class="dashboard-module active">
+                    <h2>Мои обращения</h2>
+                    <div class="request-list">
+                        <p>Пока нет обращений.</p>
+                    </div>
+                </section>
+
+                <section id="new-request-module" class="dashboard-module">
+                    <h2>Новый запрос/жалоба</h2>
+                    <form id="new-request-form">
+                        <div class="form-group">
+                            <label for="category">Категория:</label>
+                            <select id="category" name="category" required>
+                                <option value="">Выберите категорию</option>
+                                <option value="сантехника">Сантехника</option>
+                                <option value="электрика">Электрика</option>
+                                <option value="благоустройство">Благоустройство</option>
+                                <option value="другое">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Фото (необязательно):</label>
+                            <input type="file" id="photo" name="photo" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Описание:</label>
+                            <textarea id="description" name="description" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="button primary">Отправить</button>
+                    </form>
+                </section>
+
+                <section id="my-payments-module" class="dashboard-module">
+                    <h2>Мои платежи</h2>
+                    <div class="payments-list">
+                        <p>Пока нет платежей.</p>
+                    </div>
+                    <button class="button secondary">Оплатить услуги</button>
+                </section>
+
+                <section id="voting-module" class="dashboard-module">
+                    <h2>Голосования</h2>
+                    <div class="voting-list">
+                        <p>Нет активных голосований.</p>
+                    </div>
+                </section>
+
+                <section id="chat-module" class="dashboard-module">
+                    <h2>Чат с КСК</h2>
+                    <div class="chat-window">
+                        <p>Чат пока пуст.</p>
+                        <textarea placeholder="Напишите сообщение..."></textarea>
+                        <button class="button primary">Отправить</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OnlineDom. Все права защищены.</p>
+            <p>Контакты: info@onlinedom.kz</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+.payments-page {
+    padding: 40px 0;
+}
+
+.payments-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.payments-page h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.payments-list h3,
+.payment-history h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.paid {
+    color: green;
+    font-weight: bold;
+}
+
+.unpaid {
+    color: red;
+    font-weight: bold;
+}
+
+.payment-actions {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.payment-actions button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Green color for payment button */
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-actions button:hover {
+    background-color: #1e7e34;
+}
+
+.payment-actions p {
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.back-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-link a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #007bff;
+}

@@ -1,0 +1,185 @@
+.dashboard {
+    padding: 40px 0;
+}
+
+.dashboard .container {
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.dashboard-module {
+    display: none;
+}
+
+.dashboard-module.active {
+    display: block;
+}
+
+.dashboard-module h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Стили для таблицы жалоб */
+.complaints-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.complaints-table th, .complaints-table td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.complaints-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.complaints-table tr:last-child td {
+    border-bottom: none;
+}
+
+.status-new {
+    color: darkorange;
+    font-weight: bold;
+}
+
+.status-in-progress {
+    color: blue;
+    font-weight: bold;
+}
+
+.status-resolved {
+    color: green;
+    font-weight: bold;
+}
+
+/* Стили для списков документов и планов */
+.documents-list ul,
+.plans-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.documents-list li,
+.plans-list li {
+    margin-bottom: 10px;
+}
+
+.documents-list li a,
+.plans-list li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.documents-list li a:hover,
+.plans-list li a:hover {
+    color: #007bff;
+}
+
+.documents-list button,
+.plans-list button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+/* Стили для списка чатов */
+.chats-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.chats-list li {
+    margin-bottom: 10px;
+}
+
+.chats-list li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.chats-list li a:hover {
+    background-color: #eee;
+}
+
+/* Адаптивный дизайн (небольшие экраны) */
+@media (max-width: 768px) {
+    .dashboard .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .complaints-table th:nth-child(3),
+    .complaints-table td:nth-child(3),
+    .complaints-table th:nth-child(4),
+    .complaints-table td:nth-child(4) {
+        display: none; /* Скрываем некоторые столбцы на маленьких экранах */
+    }
+}

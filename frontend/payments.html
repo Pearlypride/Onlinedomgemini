@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата услуг - OnlineDom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="payments.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>OnlineDom</h1>
+            <nav>
+                <ul>
+                    <li><a href="user-dashboard.html">Личный кабинет</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="payments-page">
+        <div class="container">
+            <h2>Оплата услуг</h2>
+            <div class="payments-list">
+                <h3>Начисления</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Услуга</th>
+                            <th>Период</th>
+                            <th>Сумма</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Квартплата</td>
+                            <td>Март 2025</td>
+                            <td>5000 ₸</td>
+                            <td class="paid">Оплачено</td>
+                        </tr>
+                        <tr>
+                            <td>Электроэнергия</td>
+                            <td>Март 2025</td>
+                            <td>2500 ₸</td>
+                            <td class="unpaid">Не оплачено</td>
+                        </tr>
+                        <tr>
+                            <td>Водоснабжение</td>
+                            <td>Март 2025</td>
+                            <td>1500 ₸</td>
+                            <td class="unpaid">Не оплачено</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="payment-actions">
+                <button class="button primary">Оплатить выбранные</button>
+                <p>Для онлайн-оплаты будет использована защищенная платежная система (интеграция позже).</p>
+            </div>
+
+            <div class="payment-history">
+                <h3>История платежей</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Дата</th>
+                            <th>Услуга</th>
+                            <th>Сумма</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-03-15</td>
+                            <td>Квартплата</td>
+                            <td>5000 ₸</td>
+                            <td class="paid">Успешно</td>
+                        </tr>
+                        </tbody>
+                </table>
+            </div>
+
+            <p class="back-link"><a href="user-dashboard.html">Назад в личный кабинет</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OnlineDom. Все права защищены.</p>
+            <p>Контакты: info@onlinedom.kz</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="payments.js"></script>
+</body>
+</html>

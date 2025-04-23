@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат с КСК - OnlineDom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>OnlineDom</h1>
+            <nav>
+                <ul>
+                    <li><a href="user-dashboard.html">Личный кабинет</a></li>
+                    <li><a href="#">Выйти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="chat-page">
+        <div class="container">
+            <h2>Чат с КСК</h2>
+            <div class="chat-window">
+                <div class="message received">
+                    <p>Здравствуйте! Чем могу вам помочь?</p>
+                    <span class="timestamp">17:00</span>
+                </div>
+                <div class="message sent">
+                    <p>У меня протекает кран на кухне.</p>
+                    <span class="timestamp">17:05</span>
+                </div>
+                </div>
+            <div class="chat-input">
+                <textarea id="message-input" placeholder="Напишите сообщение..."></textarea>
+                <button id="send-button" class="button primary">Отправить</button>
+            </div>
+            <p class="back-link"><a href="user-dashboard.html">Назад в личный кабинет</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 OnlineDom. Все права защищены.</p>
+            <p>Контакты: info@onlinedom.kz</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
