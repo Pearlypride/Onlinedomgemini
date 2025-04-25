@@ -4,7 +4,12 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 .container {
@@ -16,7 +21,7 @@ body {
 header {
     background-color: #fff;
     padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
 }
 
 header .container {
@@ -30,24 +35,24 @@ header h1 {
     color: #007bff;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-header nav ul li {
+nav ul li {
     margin-left: 20px;
 }
 
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     color: #007bff;
 }
 
@@ -56,8 +61,8 @@ main {
 }
 
 .hero {
-    background-color: #e9ecef;
-    padding: 50px 0;
+    background-color: #e9f7ff;
+    padding: 60px 0;
 }
 
 .hero .container {
@@ -71,42 +76,50 @@ main {
 }
 
 .hero-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
     color: #333;
 }
 
 .hero-content p {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
     color: #555;
 }
 
-.hero-buttons a {
+.hero-buttons .button {
     display: inline-block;
-    padding: 12px 25px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 1em;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.hero-buttons .primary {
+.hero-buttons .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-buttons .button.primary {
     background-color: #007bff;
-    color: #fff;
+    color: white;
     margin-right: 15px;
 }
 
-.hero-buttons .primary:hover {
+.hero-buttons .button.primary:hover {
     background-color: #0056b3;
 }
 
-.hero-buttons .secondary {
-    background-color: #6c757d;
-    color: #fff;
+.hero-buttons .button.secondary {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
 }
 
-.hero-buttons .secondary:hover {
-    background-color: #545b62;
+.hero-buttons .button.secondary:hover {
+    background-color: #e2e6ea;
 }
 
 .hero-image {
@@ -114,19 +127,19 @@ main {
 }
 
 .hero-image img {
-    display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .features {
-    padding: 50px 0;
+    padding: 60px 0;
     background-color: #fff;
 }
 
 .features h3 {
-    font-size: 2rem;
+    font-size: 2em;
     text-align: center;
     margin-bottom: 30px;
     color: #333;
@@ -142,27 +155,31 @@ main {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-color: #f9f9f9;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.feature-item.appeared {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .feature-item h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.feature-item p {
-    color: #555;
+    color: #007bff;
+    margin-top: 0;
 }
 
 .testimonials {
-    padding: 50px 0;
+    padding: 60px 0;
     background-color: #e9ecef;
     text-align: center;
 }
 
 .testimonials h3 {
-    font-size: 2rem;
+    font-size: 2em;
     margin-bottom: 30px;
     color: #333;
 }
@@ -172,68 +189,93 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.9em;
 }
 
-footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
 
-footer p {
-    margin: 5px 0;
+footer a:hover {
+    text-decoration: underline;
 }
 
-/* Адаптивный дизайн (небольшие экраны) */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Остается на месте */
+    z-index: 1; /* Самый верхний слой */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включить прокрутку, если контент большой */
+    background-color: rgba(0,0,0,0.4); /* Черный с прозрачностью */
+}
 
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Может быть и меньше, в зависимости от контента */
+}
 
-    header h1 {
-        margin-bottom: 10px;
-    }
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-    header nav ul {
-        margin-top: 10px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-    header nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+#businessInquiryForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
-    }
+#businessInquiryForm input[type=text],
+#businessInquiryForm input[type=email],
+#businessInquiryForm input[type=tel],
+#businessInquiryForm textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
+#businessInquiryForm button[type=submit] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 
-    .hero-image {
-        max-width: 80%;
-    }
+#businessInquiryForm button[type=submit]:hover {
+    background-color: #0056b3;
+}
 
-    .features-list {
-        grid-template-columns: 1fr;
-    }
+#inquiryStatus {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    text-align: center;
+}
 
-    footer .container {
-        flex-direction: column;
-    }
-
-    footer p {
-        margin: 10px 0;
-    }
+.hidden {
+    display: none;
 }
